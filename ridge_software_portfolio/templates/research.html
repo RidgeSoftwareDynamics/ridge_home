@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Research | Ridge Software Dynamics</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Rajdhani', sans-serif;
+      background: linear-gradient(-45deg, #010f2a, #000000, #010f2a, #000000);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #f2f2f2;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .top-nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #010f2a;
+      padding: 10px 40px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: 0 0 10px #000;
+      border-bottom: 1px solid #222;
+    }
+    .nav-container {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 40px;
+      width: 100%;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+    .nav-links {
+      display: flex;
+      gap: 24px;
+    }
+    .nav-links a {
+      color: #00fff7;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: color 0.2s ease;
+    }
+    .nav-links a:hover {
+      color: #00fff7cc;
+    }
+    .top-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 100px 20px 0;
+      gap: 20px;
+    }
+    .logo {
+      width: 80px;
+      height: auto;
+    }
+    .site-title {
+      font-size: 2.8rem;
+      color: #00fff7;
+      text-shadow: 0 0 10px #00fff7aa;
+      margin: 0;
+    }
+    .coming-soon-section {
+      padding: 80px 10% 40px 10%;
+      text-align: center;
+    }
+    .coming-soon-title {
+      font-size: 2.2rem;
+      color: #00fff7;
+      margin-bottom: 24px;
+    }
+    .coming-soon-text {
+      font-size: 1.2rem;
+      color: #bbb;
+      margin-bottom: 40px;
+    }
+    .return-button {
+      display: inline-block;
+      padding: 12px 24px;
+      font-size: 1.1rem;
+      font-family: 'Rajdhani', sans-serif;
+      color: #00fff7;
+      text-decoration: none;
+      border: 2px solid #00fff7;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 10px #00fff744;
+    }
+    .return-button:hover {
+      background-color: #00fff7;
+      color: #000;
+      box-shadow: 0 0 18px #00fff7;
+    }
+  </style>
+</head>
+<body>
+  <nav class="top-nav">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <img src="/static/ridge_logo.png" alt="Ridge Software Dynamics Logo" style="height:40px; width:auto; vertical-align:middle;">
+      </a>
+      <div class="nav-links">
+        <a href="/home">Home</a>
+        <a href="/static_construct_lucy">App Portfolio</a>
+        <a href="/research">Lab</a>
+      </div>
+    </div>
+  </nav>
+  <div class="top-header">
+    <img src="/static/ridge_logo.png" alt="Ridge Software Dynamics Logo" class="logo" />
+    <h1 class="site-title">Ridge Laboratory</h1>
+  </div>
+  <section class="coming-soon-section">
+    <div class="coming-soon-title">Coming Soon</div>
+    <div class="coming-soon-text">Future lab and data API...</div>
+    <a href="/home" class="return-button">← Return to Home</a>
+  </section>
+</body>
+</html>
