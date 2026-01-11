@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ridge Software Dynamics</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Rajdhani', sans-serif;
+      background: linear-gradient(-45deg, #010f2a, #000000, #010f2a, #000000);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #f2f2f2;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .top-nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #010f2a;
+      padding: 10px 40px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: 0 0 10px #000;
+      border-bottom: 1px solid #222;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 40px;
+      width: 100%;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .nav-links a {
+      color: #00fff7;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: #00fff7cc;
+    }
+
+    .top-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 100px 20px 0;
+      gap: 20px;
+    }
+
+    .logo {
+      width: 80px;
+      height: auto;
+    }
+
+    .site-title {
+      font-size: 2.8rem;
+      color: #00fff7;
+      text-shadow: 0 0 10px #00fff7aa;
+      margin: 0;
+    }
+
+    .about-section {
+      padding: 60px 10%;
+    }
+
+    .about-content {
+      display: flex;
+      gap: 60px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .about-heading {
+      flex: 1;
+      min-width: 200px;
+      max-width: 200px;
+    }
+
+    .about-heading h2 {
+      font-size: 2rem;
+      color: #00fff7;
+      margin: 20px 0 0 0; /* ⬅ Adds 20px space above the heading */
+    }
+
+    .about-text {
+      flex: 3;
+      font-size: 1.1rem;
+      color: #bbb;
+      line-height: 1.8;
+      margin-left: -80px;
+      min-width: 0;
+    }
+
+    @media (max-width: 800px) {
+      .about-section {
+        padding: 40px 4vw;
+      }
+      .about-content {
+        flex-direction: column;
+        gap: 20px;
+        align-items: stretch;
+      }
+      .about-heading {
+        max-width: 100%;
+        min-width: 0;
+        margin-bottom: 10px;
+      }
+      .about-text {
+        margin-left: 0;
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .about-section {
+        padding: 24px 2vw;
+      }
+      .site-title {
+        font-size: 2rem;
+      }
+      .about-heading h2 {
+        font-size: 1.3rem;
+      }
+      .about-text {
+        font-size: 1rem;
+      }
+    }
+
+    .centered-button {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .widget-box {
+      margin-top: 40px;
+      background: #111;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(0, 255, 247, 0.1);
+    }
+
+    .widget-box:hover {
+      box-shadow: 0 0 20px rgba(0, 255, 247, 0.3);
+    }
+
+    .widget-box h2 {
+      font-size: 2rem;
+      color: #00fff7;
+      margin-bottom: 1rem;
+    }
+
+    .widget-box h3 {
+      font-size: 1.5rem;
+      color: #00fff7;
+      margin-bottom: 1rem;
+    }
+
+    .widget-box p {
+      font-size: 1rem;
+      color: #bbb;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #0a0a1a;
+      color: #888;
+    }
+
+    .return-button {
+      display: inline-block;
+      padding: 12px 24px;
+      font-size: 1.1rem;
+      font-family: 'Rajdhani', sans-serif;
+      color: #00fff7;
+      text-decoration: none;
+      border: 2px solid #00fff7;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 10px #00fff744;
+    }
+
+    .return-button:hover {
+      background-color: #00fff7;
+      color: #000;
+      box-shadow: 0 0 18px #00fff7;
+    }
+  </style>
+</head>
+<body>
+  <nav class="top-nav">
+  <div class="nav-container">
+    <a href="/" class="nav-logo">
+      <img src="/static/ridge_logo.png" alt="Ridge Software Dynamics Logo" style="height:40px; width:auto; vertical-align:middle;">
+    </a>
+    <div class="nav-links">
+      <!-- Mission link removed -->
+      <a href="/home">Home</a>
+      <a href="/static_construct_lucy">App Portfolio</a>
+      <a href="/research">Lab</a>
+    </div>
+    </div>
+  </nav>
+
+  <div class="top-header">
+    <h1 class="site-title">Ridge Software Dynamics</h1>
+  </div>
+
+  <section class="about-section">
+    <div class="about-content">
+      <div class="about-heading">
+        <h2>About Us</h2>
+      </div>
+      <div class="about-text">
+        <p>
+          Ridge Software Dynamics pioneers the future of artificial intelligence by engineering information constructs. These constructs are implementations of advanced mathematical operations paired with vector databases and embedding machines. Our approach treats AI as either a static or evolving system using context, abstraction, and memory interact to create static and adaptive instances of artificial intelligence.
+        </p>
+        <p>
+          By harnessing the power of complex mathematics and cutting-edge data architectures, we build applications that not only interpret reality but actively participate in it. Our technologies enable contextual understanding, allowing software to mirror, reason, and transform information in ways that drive innovation and insight.
+        </p>
+      </div>
+    </div>
+
+    <div class="centered-button">
+      <a href="/static_construct_lucy" class="return-button">→ View App Portfolio</a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Ridge Software Dynamics LLC. All rights reserved.
+  </footer>
+</body>
+</html>
